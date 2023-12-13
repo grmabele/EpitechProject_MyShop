@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        let luminosites= [{"idLuminosite":1,"luminosite":"jour"},{"idLuminosite":2,"luminosite":"nuit"}];
+        let lesconditionsMeteo = [{"idMeteo":1,"meteo":"neigeux"},{"idMeteo":2,"meteo":"nuageux"},{"idMeteo":3,"meteo":"pluvieux"},{"idMeteo":4,"meteo":"brumeux"},{"idMeteo":5,"meteo":"ensoleille"}];
+        let typesTrajets = [{"idTrajet":1,"trajet":"campagne"},{"idTrajet":2,"trajet":"montagne"},{"idTrajet":3,"trajet":"autoRoute"},{"idTrajet":4,"trajet":"agglomeration"},{"idTrajet":5,"trajet":"mixte"}];
+
+        let typesTraffics = [{"idTraffic":1,"traffic":"fluide"},{"idTraffic":2,"traffic":"dense"},{"idTraffic":3,"traffic":"embouteillage"},{"idTraffic":4,"traffic":"mixte"}];
+
+        let autresManoeuvres = [{"idManoeuvre":1,"manoeuvre":"marche arrière en ligne droite"},{"idManoeuvre":2,"manoeuvre":"marche arrière en courbe"},{"idManoeuvre":3,"manoeuvre":"rangement en créneaux"},{"idManoeuvre":4,"manoeuvre":"rangement en épis"},{"idManoeuvre":5,"manoeuvre":"rangement en bataille"},{"idManoeuvre":6,"manoeuvre":"demi-tour"},{"idManoeuvre":7,"manoeuvre":"freinage pour s'arrêter avec précision"},{"idManoeuvre":8,"manoeuvre":"démarrage en côte"}];
+
+        let experienceConduites=new Array();
+
+        // lecture données enregistrées localStorage
+        dataString=localStorage.getItem("experienceConduites");
+        if(dataString!=null){
+           experienceConduites=JSON.parse(dataString);
+        } 
+
+        document.onreadystatechange=function(){
+        if(document.readyState=="complete"){
+            afficheExperienceConduite();   
+        }
+        }
+        // fin onreadystatechange
+
+        function afficheExperienceConduite(){
+        let idKilometreSomme=0;
+        let idExperienceConduiteSomme=0; 
+        let codeHTML="<table><thead><tr><th>Experience</th><th>Date</th><th>Heure départ</th><th>Heure arrivée</th><th>Kilomètre parcourus (km)</th><th>Vitesse moyenne (km)</th><th>Jour/Nuit</th><th>Méteo</th><th>Traffic</th><th>Trajet</th><th>Manoeuvre</th><th>Commentaire</th></tr></thead><tbody>";
+        
+        experienceConduites.forEach(function(item,index){
+
+            idKilometreSomme+=parseInt(item.nombreKilometre_km);
+
+            let lIdExperienceRecherchee=item.idExperienceConduite;
+            let lHeureDepartRecherchee=item.heureDepart;
+            let lHeureArriveeRecherchee=item.heureArrivee;
+            
+
+            let LIdLuminositeRecherchee=item.idLuminosite; 
+            let luminositeRecherchee=luminosites.find(Laluminosite => Laluminosite.idLuminosite == LIdLuminositeRecherchee).luminosite;
+
+            let lIdMeteoRecherchee = item.idMeteo;
+            let meteoRecherchee = lesconditionsMeteo.find(lameteo => lameteo.idMeteo == lIdMeteoRecherchee).meteo;
+
+            let lIdTrafficRecherchee = item.idTraffic;
+            let trafficRecherchee = typesTraffics.find(letraffic => letraffic.idTraffic == lIdTrafficRecherchee).traffic;
+
+            let lIdTrajetRecherchee = item.idTrajet;
+            let trajetRecherchee = typesTrajets.find(letrajet => letrajet.idTrajet == lIdTrajetRecherchee).trajet;
+
+            let lIdManoeuvreRecherchee = item.idManoeuvre;
+            let manoeuvreRecherchee = autresManoeuvres.find(lamanoeuvre => lamanoeuvre.idManoeuvre == lIdManoeuvreRecherchee).manoeuvre;
+            
+        codeHTML+=`<tr><td>${item.idExperienceConduite}</td><td>${item.Date}</td><td>${item.heureDepart}</td><td>${item.heureArrivee}</td><td>${item.nombreKilometre_km}</td><td>${item.vitesseMoyenne_kmh}</td><td>${luminositeRecherchee}</td><td>${meteoRecherchee}</td><td>${trafficRecherchee}</td><td>${trajetRecherchee}</td><td>${manoeuvreRecherchee}</td><td>${item.commentaire}</td></tr>`;        
+        });    
+        
+        codeHTML+="</tbody></table>";
+
+        document.getElementById('main').insertAdjacentHTML("afterbegin",codeHTML);
+        document.getElementById('main').insertAdjacentHTML('beforeend',"<p>Total des Kilometres parcourus : "+idKilometreSomme+'</p>');
+
+        }        
+        // fin func      
+
+    </script>
+     <style>
+        body{background: #bdc3c7; align-items: center; margin-left: 60px; margin-right: 60px;
+            font-family: verdana, sans-serif;}
+        table {table-layout: auto; width: 100%; border: 5px solid #0F8E9F; border-collapse: collapse; background: #d9ebed; text-align: center;}
+        th, td { border: 2px solid #0F8E9F; padding: 10px;}
+    </style>
+</head>
+<body>
+
+    <header class="py-4">
+    
+            <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light"> 
+            <div class="container shadow p-2 mb-0 bg-body rounded">
+                <a class="navbar-brand text-uppercase fw-bold" href="#"><span class="bg-info bg-gradient p-1 rounded-3 text-light">Ma</span> Conduite
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="formulaire.html">[ RETOUR FORMULAIRE ]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:localStorage.removeItem('experienceConduites');">[ EFFACER TOUT ]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </nav>   
+    </header>
+
+    <section class="col-12 my-2 text-md-center mb-5 mt-5">
+    <h1>Mes expériences de conduite</h1>
+    </section>
+
+    <section id="main"></section>
+          
+</body>
+</html>

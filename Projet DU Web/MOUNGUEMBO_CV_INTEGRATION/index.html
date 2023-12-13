@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="résumé de mon parcours professionnel, mon cursus universitaire et mes centre d'intérêrets">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta rel="stylesheet" href="css/normalize.css">
+    
+    <title>CV MOUNGUEMBO</title> 
+    <style>
+        @media screen 
+      and (min-width: 640px){
+
+        :root{
+        --couleur__principal: #FEFEE0;
+        --couleur__secondaire_1: #112635;
+        --couleur__secondaire_2: #A98743;
+        --couleur__accentuation: #0065A9;
+        --couleur__fond: #D9D9D9;
+        --couleur__icons: #000000;
+        }
+
+        /********************************/
+        /*      Mise en page            */
+        /*         body                 */
+        /********************************/
+
+
+        html{
+        font-family: 'Dosis', sans-serif;
+        font-weight: 400;
+        }  
+
+      body{
+        display: flex;
+        background-color: #fff;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .container{
+        width:60vw;
+        min-height:80vh;
+        display:grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto 1fr 25px;
+      }
+
+      /* Fin de mise en page body */
+
+      /********************************/
+      /*      Mise en page            */
+      /*         Header               */
+      /********************************/
+
+      header{
+        color: var(--couleur__principal);
+        background-color: var(--couleur__secondaire_1);
+        min-height: 60px;
+        position: relative;
+        }
+
+      #header{
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+        }
+
+      .tittle-haut{display: block;}
+      .hautPage .tittle-haut .profile {padding: 5px;}
+
+    .hautPage{
+        position: relative;
+        display: flex;
+        flex-direction: row;     
+      }
+
+      .hautPage .profile{
+        position: relative;
+        width: 165px;
+        height: 250px;
+        border-radius: 50%;
+        overflow:hidden;
+        display: flex;
+        margin-right: 5px;
+      }
+      .profile{width: 300px;height: 200px;}
+
+      .tittle-haut h1 span{font-size: 16pt;
+    font-weight: normal;}
+      }
+
+      /* Fin de mise en page Header */
+
+      /*.hautPage .profile .img{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        object-fit:cover;
+      }*/
+      
+      /********************************/
+      /*      Mise en page            */
+      /*         Article              */
+      /********************************/
+
+      article{
+        background-color: var(--couleur__fond);
+        min-height: 400px;
+        padding-left: 10px;
+      }
+
+      #article{
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      }
+
+      h2 span{margin-left: 10px;}
+
+      /* Fin de mise en page Article */
+
+      /********************************/
+      /*      Mise en page            */
+      /*         Aside                */
+      /********************************/
+      
+      aside{
+        background-color: var(--couleur__secondaire_2);
+        min-height: 400px;
+      }
+
+      #aside{
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      }
+
+      .tittle-contact h3,.competences h3,.loisirs h3,.langues h3 {color: var(--couleur__secondaire_1); text-align: center;}
+      .langues p {text-align: center; color: var(--couleur__principal);}
+     
+      .contact a:active{
+        color: var(--couleur__principal);
+        margin-bottom: 10px;
+      }
+      .contact{
+       color: var(--couleur__principal);
+        margin-bottom: 10px;
+      }
+      
+      .tittle-contact ul{
+        position: relative;
+      }
+
+      .tittle-contact ul li{
+       position: relative;
+        list-style: none;
+      }
+      .tittle-contact ul li .icon{
+        display: inline-block;
+        font-size: 18pt;
+      }
+
+      .loisirs ul {list-style: none;
+        }
+      .loisirs ul li .text{color: var(--couleur__principal);}
+      .competences{text-align: center;}
+      .competences p{color: var(--couleur__principal);}
+
+      /* Fin de mise en page Aside */
+
+      /********************************/
+      /*      Mise en page            */
+      /*         Footer               */
+      /********************************/
+
+      footer{
+        font-size: 8pt;
+        color:var(--couleur__principal);
+        background-color: var(--couleur__secondaire_1);
+        min-height: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+   
+      #footer{
+      grid-column: 1/ 3;
+      grid-row: 3 / 4;
+      }
+
+      /* Fin de mise en page Footer */
+   
+    </style> 
+    
+</head>
+
+<body>
+    <div class="container">
+
+      <!--Haut de page---> 
+
+        <header id="header">
+            <div class="hautPage">
+                <div class="profile">
+                    <img src="assets/DSC_1148.jpg" alt="photo-profile">
+                </div>
+                <div class="tittle-haut">
+                  <h1>Relgrand MOUNGUEMBO<br><span>Développeur Web Full Stack</span></h1>
+                  <p><em>En reconversion, je me réoriente vers une carrière de développeur Web. Autonome avec<br>une forte capacité d'adaptation, je recherche une alternance à la rentrée de septembre en<br> licence pro Développement Web, Communication et Apprentissages parcours de la mention<br> Métiers de l'informatique : Conception, développement et test de logiciels à l'Université<br> de Strasbourg</em></p>   
+                </div>
+                
+            </div>    
+      </header>
+
+      <!--Article--->
+
+      <article id="article">
+          <section>
+              <div class="title-bloc">
+                <h2><img src="assets/briefcase-solid.svg" alt="Expérience professionnelle" width="20px"><span>Expérience professionnelle</span></h2>
+          <!--<span class="material-symbols-outlined"></span>-->
+              </div>
+
+              <div id="premiere-partie">
+                  <p>Projet développeur web</p>
+                  <ul>
+                      <li>Création d'un site e-commerce web responsive design (html & css, Bootstrap)</li>
+                      <li>Création d'un site d'annonce gratuites avec laravel (PHP)</li>
+                      <li>Familiarisation avec la base de donnée MySQL</li>
+                      <li>Création d'un site de gestion de tâches (TodoList) avec VueJs</li>
+                      <li>Création de deux applications de Conduite accompagné (JS et en PHP)</li>
+                      <li>Conception des maquettes de sites avec affinity (association et restaurant)</li>  
+                  </ul> 
+                  <p>Novembre 2019-Janvier 2021 : Gestion de projet chez OSDIGIT</p>
+                  <ul>
+                      <li>Animation et maintenance du site internet</li>
+                      <li>Gestion des relations clienteles et pilotage des projets</li> 
+                      <li>Photographie et montage vidéo (Davinci resolve, final cut, photoShop)</li>      
+                  </ul>       
+                  <p>Avril-octobre 2019 : Stage et CDD - Assistant RH chez C-Montiquette</p>
+                  <ul>
+                      <li>Gestion des contrats, arrêt de travail, visites médicales, du processus de <br>recrutement et mise en place du coffre-fort électronique</li>
+                      <li>Création DPAE et élaboration du document unique</li>
+                      <li>Edition, suivi et contrôle des élements préparatoires pour des <br>fiches de paies</li>
+                      <li>Définition des profils avec les managèrs et création des fiches de postes</li>
+                      <li>Gestion du processus d'intégration des nouveaux : mise en place des livrets<br>d'acceuil et de formation; entrevue et rapport d'etonnement</li>
+                  </ul>
+                  <p>Juin-Septembre 2018 : Assistant de production chez C-Montiquette</p>
+                  <ul>
+                      <li>impression, côntrole et qualité / gestion des fichiers (générateurs)</li>
+                      <li>Maintenance informatique / gestion du stock informatique</li>
+                      <li>Suivi des des stocks des matères premières et consommables</li>
+                      <li>Proposition des solutions d'amélioration</li>
+                  </ul>       
+              </div>
+          </section>
+          <section>
+              <div class="title-bloc">
+                  <h2><img src="assets/book-solid.svg" alt="Formations" width="20px"><span>Formations</span></h2>
+              </div>
+
+              <div id="deuxieme-partie">
+                  <p>2022-2023 : DU Développeur Web Full Stack, Université de strasbourg</p>
+                  <p>2021-2022 : Certification Intégrateur - Développeur web, Epitech, Strasbourg</p>
+                  <p>2016-2019 : Master GRH - parcours type : Recherche, études et conseil en<br>organisation, travail et ressources humaines Université Aix-Marseille</p>
+                  <p>2014-2015 : Licence pro Gestion des RH, Université Marien N'gouabi, Congo</p>
+              </div>   
+          </section>              
+      </article>
+
+      <!--Aside--->
+
+      <aside id="aside">
+            
+            <div class="tittle-contact">
+                <h3>Coordonnées</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="contact">11 route de l'île des épis 67000 Strasbourg</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="contact"><a title="Courriel personnel" href="mailto:grmabele@gmail.com">grmabele@gmail.com</a></span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                        <span class="contact"><a title="LinkedIn" href="https://www.linkedin.com/feed/">linkedin.com/in/r-giresse-mounguembo-mabele-010173172</a></span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                        <span class="contact"><a title="GitHub" href="https://github.com/grmabele">htts://github.com/grmabele</a></span>
+                    </li>  
+                </ul>
+            </div>
+
+            <div class="competences">
+                <h3>Compétences informatiques</h3>
+                <p>
+                    <strong>Intégration:</strong> html & css, js, php, sql<br><br><strong>Frameworks:</strong> bootstrap, laravel<br><br>
+                    <strong>CMS:</strong> wordpress, prestashop<br><br><strong>graphisme:</strong> photoshop, figma<br><br><strong>Outils:</strong> docker, gitHub, visual studio
+                </p>   
+            </div>
+
+            <div class="langues">
+                <h3>Langues</h3>
+                <p>Français : langue maternelle</p>
+                <p>Anglais : niveau intermédiare</p>
+            </div>
+
+            <div class="loisirs">
+                <h3>Loisirs</h3>
+                <ul>
+                  <li>
+                    <span class="icon"><i class="fa fa-plane" aria-hidden="true"></i></span>
+                    <span class="text">Voyage</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <span class="icon"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>
+                    <span class="text">Gym</span>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <span class="icon"><i class="fa fa-book" aria-hidden="true"></i></span>
+                    <span class="text">Lecture</span>
+                  </li>
+                </ul>  
+            </div>   
+            
+      </aside>
+
+      <!--Bas de page--->
+
+      <footer id="footer">
+          <p>coryrith 2023 - <strong>Relgrand MOUNGUEMBO</strong> Tous droits reservés</p>
+      </footer>
+
+    </div>
+  
+</body>
+</html>
+

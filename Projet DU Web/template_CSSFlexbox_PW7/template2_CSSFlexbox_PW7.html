@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+      /* Layout */
+      @media screen 
+      and (max-width: 640px){
+      * {
+        /* for a better control of width and flex-basis */
+        box-sizing: border-box;
+      }
+
+
+      /* Decoration */
+      body {
+        margin: 0;
+        background: #999;
+        font-family: arial, sans-serif; 
+        justify-content: space-between;
+        
+      }
+
+      .wapper{
+        display: flex;
+        flex-direction: column;
+      }
+      .wrapper > article{
+        flex: 2 1 0 0 0;
+      }
+
+      header,
+      nav,
+      aside,
+      article,
+      footer {
+        margin: .4em;
+        padding: 1em;
+        border-radius: 6px;
+      }
+
+      header {
+        background: #feb;
+        max-height: 80px;
+        min-height: 60px;
+        order: 1;
+      }
+
+      nav {
+        background: #ccf;
+        max-height: 80px;
+        min-height: 60px;
+        order: 3;
+      }
+
+      aside {
+        background: #ccf;
+        max-height: 80px;
+        min-height: 60px;
+        order: 4;
+      }
+
+      article {
+        background: #dd8;
+        min-height: 200px;
+      }
+
+      footer {
+        background: #feb;
+        max-height: 80px;
+        min-height: 60px;
+        order: 5;
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>header</header>
+
+    <div class="wrapper">
+      <article>article</article>
+      <nav>navigation</nav>
+      <aside>aside</aside>
+    </div> <!-- /wrapper -->
+
+    <footer>footer</footer>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen 
+        and (max-width: 640px){
+        body{
+            background:#999;
+            width:100vw;
+            min-height:100vh;
+            display:grid;
+            grid-gap: 10px;
+            grid-template-rows: auto 1fr auto auto auto;
+            box-sizing: border-box;
+            padding: 5px 5px 5px 5px;
+            margin: 0;
+        }
+        header{
+            background:#feb;
+            min-height: 80px;   
+        }
+        article{
+        background:#dd8;
+        
+        }
+        nav{
+        background:#ccf;
+        min-height: 80px;
+        }
+        aside{
+        background:#ccf;
+        min-height: 80px;
+        }
+        footer{
+        background:#feb;
+        min-height: 80px;
+        }
+        header, article, nav, aside, footer{
+        border-radius:5px;  
+        }
+
+        #textR1{
+        grid-row: 1/2;
+        }
+        #textR3{
+        grid-row: 2/3;
+        }
+        #textR2{
+        grid-row: 3/4;
+        }
+        #textR4{
+        grid-row: 4/5;
+        }
+        #textR5{
+        grid-row: 5/6;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header id="textR1">Header</header>
+    <article id="textR3">Article</article>
+    <nav id="textR2">Navigation</nav>
+    <aside id="textR4">Aside</aside>
+    <footer id="textR5">Footer</footer>
+</body>
+</html>

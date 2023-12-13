@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+      /* Layout */
+
+      @media screen 
+      and (min-width: 640px){
+
+      * {
+        /* for a better control of width and flex-basis */
+       box-sizing: border-box; 
+      }
+
+
+      /* Decoration */
+      body {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin: 0px;
+        background: #999;
+        font-family: arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-width: 100vw;
+        justify-content: center;
+       
+      }
+
+      .wrapper{
+        display: flex;
+        flex-direction: row;
+        min-height: 400px;
+        justify-content: space-between;
+      }
+
+      .wrapper :first-child :last-child{
+        width: 160px;
+      }
+      .wrapper :first-child{
+        flex: 1 0 1;
+      }
+      .wrapper :last-child{
+        flex: 1 0 1;
+      }
+      .wrapper > article{
+        flex: 2 1 0;
+      }
+  
+
+      header,
+      nav,
+      aside,
+      article,
+      footer {
+        margin: .4em;
+        padding: 1em;
+        border-radius: 6px;          
+      }
+
+      header {
+        background: #feb;
+        max-height: 80px;
+        min-height: 60px;
+      }
+
+      nav {
+        background: #ccf;
+        width: 160px;
+        order: 0;  
+      }
+
+      aside {
+        background: #ccf;
+        width: 160px; 
+        order: 2;
+      }
+
+      article {
+        background: #dd8;
+        order: 1;
+      }
+
+      footer {
+        background: #feb;
+        max-height: 80px;
+        min-height: 60px;
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>header</header>
+
+    <div class="wrapper">
+      <article>article</article>
+      <nav>navigation</nav>
+      <aside>aside</aside>
+    </div> <!-- /wrapper -->
+
+    <footer>footer</footer>
+  </body>
+</html>

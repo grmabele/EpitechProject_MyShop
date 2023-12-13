@@ -1,0 +1,626 @@
+*{
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Le corps de notre page est divisé en trois grande partie l'entête, le menu et le pied de page*/
+
+  body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    text-align:justify; 
+    background-color: #dcdcdcfc; 
+    width: 1200px;  
+}
+
+p{
+    font-size: 10pt;
+}
+
+/* Dans cette partie on retrouve l'entête de notre page répresenté par l'élément header*/
+
+#hd1{
+    background-color: hsl(194, 70%, 41%);
+    color: rgb(255, 255, 255);
+    width: 1080px;
+    height: 50px;
+    text-indent: 8%;
+}
+
+h1, h2, h4{
+    font-weight: normal;     
+}
+
+.titre1{
+    background-color: hwb(164 0% 2%);
+}
+
+.h1{
+    padding: 5px;
+}
+
+/* Dans cette partie nous avons la barre de navigation réprésenté par l'élément nav dans lequel nous avons mis nos liens*/
+
+.navbar{
+    background-color: hsl(179, 70%, 41%);
+    color: rgb(255,255,255);
+    width: 1080px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    text-indent: 1%; 
+}
+
+.titre{
+    background-color: hwb(164 0% 2%);
+    vertical-align: middle;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(255,255,255); 
+    padding: 30px;
+    vertical-align: top;   
+}
+
+a:hover{
+    color: yellow;
+}
+
+
+/* Dans cette parie nous avons le menu de notre page qui regroupe les éléments acticle et aside
+Pour simplifier le code, nous avons mis le menu dans un bloc div */
+
+#main{
+    display: inline-block;  
+    background-color: #dcdcdcfc;
+    clear: both;
+    width: 1030px;
+    margin-bottom: 0;
+    margin-left: 80px;
+    margin-right: 100px;
+}
+
+        /* L'élement article de notre page est constitué de deux grandes sections */
+
+.class1{
+    background-color: hwb(164 0% 2%);
+    color: rgb(255,255,255); 
+    font-weight: normal;
+    
+}
+
+.titre4{
+    background-color: hwb(164 0% 2%);
+    color: rgb(255,255,255);
+    font-weight: normal;
+    margin: 0%;
+    padding: 5px;   
+}
+.titre5{
+    background-color: hwb(164 0% 2%);
+    color: rgb(255,255,255);
+    font-weight: normal; 
+    margin-bottom: 5px;
+    padding-left: 5px; 
+    padding-top: 2px; 
+  justify-content: center;
+    text-align: center;
+}
+
+
+.titre2{
+    background-color: hwb(164 0% 2%);
+    color: rgb(255,255,255);
+   font-weight: normal;
+   margin-top: 2%;
+   
+}
+
+.h2{
+    padding: 5px;
+}
+
+.hd2{
+    background-color: hsl(194, 70%, 41%);
+    color: rgb(255,255,255);
+    width: 670px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-indent: 2%;
+    border: 1px slategray black;;
+}
+
+.titre3{
+    background-color: hwb(164 0% 2%);
+    color: rgb(255,255,255);
+   font-weight: normal;
+}
+
+.ft2{
+    background-color: hsl(0, 70%, 41%);
+    color: rgb(255,255,255);
+    width: 670px;
+    height: 70px; 
+}
+
+.para2{
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#article{
+    border: 1px solid black;
+    width: 720px;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: center;
+    margin-bottom: 2%;
+    float: left;
+    display: block;
+    background-color: rgb(255,255,255);
+    
+    
+}
+
+.article1{
+    text-indent: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.para1{
+   border: 1px solid black;
+   width: 670px;
+   padding: 10px; 
+  }
+
+.para3{
+    width: 670px;
+    border: 1px solid black;
+    padding: 10px;  
+}
+#section1{
+    border: 1px solid black;
+    margin-top: 0;
+    padding: 2%;
+    margin-left: 2px;
+    width: 700px;
+    align-items: center;
+    background-color: #dcdcdcfc;  
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#section2{
+    border: 1px solid black;
+    padding: 2%;
+    margin-bottom: 2%;
+    margin-left: 4px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+    width: 700px;
+    background-color: #dcdcdcfc;  
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+
+        /* Nous retrouvons ici le deuxième bloc de notre menu réprésenté par l'élement élement ASIDE */
+
+#aside1{
+    width: 280px;
+    border: 1px solid black;
+    margin: 2%;
+    padding: 5px;
+    background-color: #dcdcdcfc;
+}
+
+#aside2{
+    width: 280px;
+    border: 1px solid black;
+    margin: 2%;
+    padding: 5px;
+    background-color: #dcdcdcfc;
+}
+
+#aside{
+    width: 300px;
+    border: 1px solid black;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    float: right;
+    top: 150px;
+    display: block;
+    background-color: rgb(255,255,255);
+}
+
+
+
+/* Et enfin dans cette dernière partie nous avons le pied de page répresenté par la balise footer */
+
+#ft1{
+    background-color: hsl(0, 70%, 41%);
+    color: rgb(255,255,255);
+    width: 1080px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+nav ul li{
+    list-style: none;
+}
+
+.class0{
+    display: inline-flex;
+    margin-top: 0%;    
+}
+
+.titre4{
+    background-color:  hwb(164 0% 2%);
+    display: inline-flex;
+}
+
+/*
+a{
+    text-decoration: none;
+}
+
+
+
+nav#navbar h4{
+    text-indent: 1%;
+}
+
+nav ul{
+    vertical-align: top;
+}
+
+div#navbar nav ul{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*{
+    box-sizing: border-box;
+}
+#nav{
+    background-color: lightseagreen;
+    width: 1020px;
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 10px; 
+    display: inline-block;
+    text-indent: 30px;
+}
+
+
+
+#hd2{
+    background-color:lightseagreen;
+    width: 1020px;
+    justify-content: center;
+    text-align: center;
+}
+
+span nav{
+    padding-top: 1px;
+}
+
+.nav1{
+    text-decoration: none;
+    color: blue;
+    vertical-align: top;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt; 
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+article footer h3{
+  text-align: center;
+} 
+
+#ft2{
+    width: 700px;
+    background-color: red;
+}
+
+article h3{
+    width: 700px;
+}
+
+.para3{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*footer h3{
+    background-color: red;
+    width: 1000px;
+    justify-content: center;
+    text-align: center;
+} 
+
+.header{
+    background-color: mediumspringgreen;
+}
+
+#hd1{
+    background-color:lightseagreen;
+    width: 700px;  
+    
+}
+
+
+
+
+
+h1, h2{
+    text-indent: 30px;
+}
+
+article h2{
+    text-indent: 30px;
+}
+
+#containeur{
+    width: 1000x;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#main{
+    width: 700px;
+    display: block;
+    border: 1px black solid;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+#aside{
+    border: 1px black solid;
+    width: 300px;
+    box-sizing: border-box;
+    float: right;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+#article{
+    border: 1px black solid;
+    width: 700px;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+.article1{
+    border: 1px black solid;
+    width: 700px;
+    box-sizing: border-box;
+}
+
+.article2{
+    border: 1px black solid;
+    width: 700px;
+    box-sizing: border-box;
+   }
+
+   .aside1{
+    border: 1px black solid;
+    width: 300px;
+    box-sizing: border-box;
+   }
+
+   .aside2{
+    border: 1px black solid;
+    width: 300px;
+    box-sizing: border-box;
+   }
+
+   .para1{
+        border: 1px black solid;
+        box-sizing: border-box;
+        padding: 5 5 5 5;
+
+
+   }
+
+   .para2{
+        border: 1px black solid;
+        box-sizing: border-box;
+        text-align:left;
+   }
+
+   #ft1{
+    background-color: red;
+    width: 1020px;
+    align-items: center;
+   }
+
+   footer p{
+    justify-content: center;
+    text-align: center;
+   }
+
+   footer .header{
+    justify-content: center;
+    text-align: center;
+   }
+
+   */
+
+
+
+
+
+
+
+/*body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt; 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    width: 700px;
+}
+
+
+
+.nav{
+    display: inline-block;
+    background-color: lightseagreen;
+    width: 1000px;   
+}
+
+.article{
+    width: 525px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px black solid;
+    display: block;
+    float: left;
+    
+}
+
+.article1{
+    display: block;
+}
+
+#aside{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px black solid;
+    box-sizing: border-box;
+    float: right;
+}
+
+.aside1{
+    border: 1px black solid;
+    display: block;
+}
+
+.aside2{
+    border: 1px black solid;
+    display: block;
+}
+
+#main{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    height: auto;
+}
+
+.footer{
+    width: 1000px;
+}
+
+article[footer]{
+    width: 600px;
+}
+
+.hd1{
+    background-color:lightseagreen
+}
+
+
+
+.header{
+    background-color: mediumspringgreen;
+}
+
+ul{
+    list-style: none;
+}
+
+.p1{
+    border: 1px black solid;
+    box-sizing: border-box;
+}
+
+
+.foot{
+    background-color: mediumspringgreen;
+}
+
+.footer{
+    background-color: red;
+}
+
+
+
+
+
+h1{
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+*/

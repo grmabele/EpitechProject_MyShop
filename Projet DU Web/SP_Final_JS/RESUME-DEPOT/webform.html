@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>CONDUITE ACCOMPAGNÉ</title>
+    
+</head>
+<body>
+
+     <!-- Titre de la page-->
+
+    <h1>
+        <span>Quizz</span>
+        d'expérience de conduite accompagné. ✅
+    </h1>
+    
+   <!-- Ce formulaire permet de saisir les informations sur le trajet, de l'expérience de conduite accompagné d'un jeune apprenant -->
+
+    <div class="container">
+
+        <form method="post" action="reponse.php" target="_blank">
+
+            <div class = "question">
+                <h4>Information sur le trajet</h4>
+
+                <div>
+                    <label for="trajet"><span class="appt">Expérience de conduite :</span></label>
+                    <input type="number" name="numero" id="trajet" min="1" max="10">
+                </div>
+
+                <div>
+                    <label for="start"><span class="appt">Date :</span></label>
+                    <input type="date" name="trip-start" id="start" value="2023-01-01" min="2023-01-01" max="2030-12-31">
+                </div>
+
+                <div>
+                    <label for="appt"><span class="appt">Heure de départ :</span></label>
+                    <input type="time" name="heure-depart" id="appt"><br>
+                </div>
+
+                <div>
+                    <label for="ha"><span class="appt">Heure d'arrivée :</span></label>
+                    <input type="time" name="heure-arrive" id="ha" min="9:00" max="18:00" required> 
+                </div>
+
+                <div class="class1">
+                    <label for="vitesse-moyenne"><span class="appt">Vitesse moyenne (km/h):</span></label>
+                    <input type="number" name="vit" id="vitesse-moyenne">
+                </div>
+
+                <div class="class1">
+                    <label for="km"><span class="appt">Kilométrage parcourus (km):</span></label>
+                    <input type="text" name="kilometre" id="km">
+                </div>
+
+                <div>
+                    <span class="appt">Jour/Nuit :</span>
+                    <select class="select">
+                        <option value="jour">Jour</option>
+                        <option value="nuit">Nuit</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span class="appt">Méteo :</span>
+                    <select class="select">
+                        <option value="idMeteo1">Neigeux</option>
+                        <option value="idMeteo2">Nuageux</option>
+                        <option value="idMeteo3">Pluvieux</option>
+                        <option value="idMeteo4">Brumeux</option>
+                        <option value="idMeteo5">Ensoleillé</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span class="appt">Traffic :</span>
+                    <select class="select">
+                        <option value="idTraffic1">Fluide</option>
+                        <option value="idTraffric2">Dense</option>
+                        <option value="idTraffic3">Embouteillage</option>
+                        <option value="idTraffic4">Mixte</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <span class="appt">Type de trajet :</span>
+                    <select class="select">
+                        <option value="idTrajet1">Campagne</option>
+                        <option value="idTrajet2">Montagne</option>
+                        <option value="idTrajet3">Autoroute</option>
+                        <option value="idTrajet4">Agglomeration</option>
+                        <option value="idTrajet5">Mixte</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="question">
+                <h4>Manoeuvres et stationnements</h4>
+
+                <div class="contain">
+                    <label type="text">Marche arrière en ligne droite</label>
+                    <input type="checkbox" id="check1" class="toggle">
+                    <label for="check1"></label>
+                 </div>
+        
+                  <div class="contain">
+                    <label type="text">Marche arrière en courbe</label>
+                    <input type="checkbox" id="check2" class="toggle"> 
+                    <label for="check2"></label>
+                  </div>
+        
+                  <div class="contain">
+                    <label type="text">Rangement en créneau</label>
+                    <input type="checkbox" id="check3" class="toggle">
+                    <label for="check3"></label>
+                  </div>
+        
+                  <div class="contain">
+                    <label type="text">Rangement en épis</label>
+                    <input type="checkbox" id="check4" class="toggle"> 
+                    <label for="check4"></label>
+                  </div>
+        
+                  <div class="contain">
+                    <label type="text">Rangement en bataille</label>
+                    <input type="checkbox" id="check5" class="toggle">
+                    <label for="check5"></label>
+                  </div>
+        
+                  <div class="contain">
+                    <label type="text">Demi-tour</label>
+                    <input type="checkbox" id="check6" class="toggle">
+                    <label for="check6"></label>
+                  </div>
+        
+                  <div class="contain">
+                    <label type="text">Freinage pour s'arrêter avec précision</label>
+                    <input type="checkbox" id="check7" class="toggle">
+                    <label for="check7"></label>
+                    
+                  </div>
+                  <div class="contain">
+                    <label type="text">Démarrage en côte</label>
+                    <input type="checkbox" id="check8" class="toggle">
+                    <label for="check8"></label>
+                  </div>
+            </div>
+
+            <div class="question">
+                <h4>Evaluation</h4>
+                <div class="block">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                </div>
+            </div>
+
+            <div class="question">
+                <h4><span>Commentaires :</span></h4>
+                <textarea name="commentaire" id="comment" placeholder="Mettez votre commentaire ici"></textarea>
+            </div>
+
+            <button type="submit" value="button">Envoyez</button>
+           
+        </form>
+    </div>
+ 
+</body>
+</html>

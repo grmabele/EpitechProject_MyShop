@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script>
+
+        let luminosites= [{"idLuminosite":1,"luminosite":"jour"},{"idLuminosite":2,"luminosite":"nuit"}];
+
+        let lesconditionsMeteo = [{"idMeteo":1,"meteo":"neigeux"},{"idMeteo":2,"meteo":"nuageux"},{"idMeteo":3,"meteo":"pluvieux"},{"idMeteo":4,"meteo":"brumeux"},{"idMeteo":5,"meteo":"ensoleille"}];
+
+        let typesTrajets = [{"idTrajet":1,"trajet":"campagne"},{"idTrajet":2,"trajet":"montagne"},{"idTrajet":3,"trajet":"autoRoute"},{"idTrajet":4,"trajet":"agglomeration"},{"idTrajet":5,"trajet":"mixte"}];
+
+        let typesTraffics = [{"idTraffic":1,"traffic":"fluide"},{"idTraffic":2,"traffic":"dense"},{"idTraffic":3,"traffic":"embouteillage"},{"idTraffic":4,"traffic":"mixte"}];
+
+        let autresManoeuvres = [{"idManoeuvre":1,"manoeuvre":"marche arrière en ligne droite"},{"idManoeuvre":2,"manoeuvre":"marche arrière en courbe"},{"idManoeuvre":3,"manoeuvre":"rangement en créneaux"},{"idManoeuvre":4,"manoeuvre":"rangement en épis"},{"idManoeuvre":5,"manoeuvre":"rangement en bataille"},{"idManoeuvre":6,"manoeuvre":"demi-tour"},{"idManoeuvre":7,"manoeuvre":"freinage pour s'arrêter avec précision"},{"idManoeuvre":8,"manoeuvre":"démarrage en côte"}];
+
+        function saveExpConduite(){
+
+        //lecture champs de formulaire
+        laDate= document.getElementById("idDate").value; 
+        lHeureDepart = document.getElementById("heureDepart").value;
+        lHeureArrivee = document.getElementById("heureArrivee").value;
+        leNombreKilometre = document.getElementById("km").value;
+        laVitesseMoyenne = document.getElementById("vitesseMoyenne").value;
+        lIdLuminosite = document.getElementById('idLuminosite').value;
+        lIdMeteo = document.getElementById("idMeteo").value;
+        lIdTraffic = document.getElementById("idTraffic").value;
+        lIdTrajet = document.getElementById("idTrajet").value;
+        lIdManoeuvre = document.getElementById("idManoeuvre").value;
+        leCommentaire = document.getElementById("comment").value;
+
+        console.log(`Date : ${laDate},heureDepart: ${lHeureDepart},heureArrivee: ${lHeureArrivee}, nombreKilometre_km: ${leNombreKilometre}, vitesseMoyenne_kmh: ${laVitesseMoyenne}, idLuminosite: ${lIdLuminosite}, idMeteo: ${lIdMeteo}, idTraffic : ${lIdTraffic}, idTrajet : ${lIdTrajet}, idManoeuvre: ${lIdManoeuvre}, commentaire: ${leCommentaire}`);
+
+        experienceConduite= new Array(); // empty array
+
+       // lecture localStorage : getItem()   
+       dataString=localStorage.getItem("experienceConduites");
+       if(dataString!=null){experienceConduite=JSON.parse(dataString);} 
+       
+        // JSON data expérience de conduite depuis données du formulaire
+        newIDExperienceConduite = experienceConduite.length+1; // identifiant = PK auto incrémenté
+        newExperienceConduite={"idExperienceConduite":newIDExperienceConduite,"Date":laDate,"heureDepart":lHeureDepart, "heureArrivee":lHeureArrivee, "nombreKilometre_km":leNombreKilometre, "vitesseMoyenne_kmh": laVitesseMoyenne,"idLuminosite":lIdLuminosite,"idMeteo":lIdMeteo, "idTrajet":lIdTrajet, "idTraffic":lIdTraffic,"idManoeuvre":lIdManoeuvre, "commentaire":leCommentaire};
+
+        console.log(newExperienceConduite);
+       
+        // ajout d'une expérience de conduite avec la méthode push()
+        experienceConduite.push(newExperienceConduite);
+        console.log(experienceConduite);
+
+        // écriture localStorage avec la méthode setItem() mais on vas d'abord transformer nos données JSON en string (chaîne de texte) avec la méthode stringify()
+        
+        experienceConduiteString=JSON.stringify(experienceConduite);
+        console.log(experienceConduiteString);
+
+        localStorage.setItem('experienceConduites',experienceConduiteString);
+
+        // Après l'écriture localcalStorage, on remet le formulaire à zéro avec la méthode réset()
+        document.getElementById("expConduiteForm").reset();
+      } //func      
+        
+    </script>
+</head>
+<body>
+    <a href="voirMesExperiences.html">Voir Mes Expériences de conduite</a>
+    <h1>
+        <span>Saisir</span>
+        une expérience de conduite accompagné. ✅
+    </h1> 
+    <div class="container">
+        <form id="expConduiteForm">
+
+            <div class = "question">
+                <h4>Information sur le trajet</h4>    
+    
+                <div class="input">
+                    <label for="idExperienceConduite"><span class="appt">Expérience :</span></label>
+                    <input type="number" name="numero" id="idExperienceConduite" min="1" max="10">
+                </div>
+                <div class="input">
+                    <label for="idDate"><span class="appt">Date :</span></label>
+                    <input type="date" name="trip-date" id="idDate" value="yyy-MM-dd" min="2023-01-01" max="2030-12-31" required>
+                </div>
+                <div class="input">
+                    <label for="heureDepart"><span class="appt">Heure départ :</span></label>
+                    <input type="time" name="debut" id="heureDepart">
+                </div>
+                <div class="input">
+                    <label for="heureArrivee"><span class="appt">Heure arrivée :</span></label>
+                    <input type="time" name="fin" id="heureArrivee" min="9:00" max="18:00" required> 
+                </div>
+                <div class="input">
+                    <label for="vitesseMoyenne"><span class="appt">Vitesse moyenne (km/h):</span></label>
+                    <input type="number" name="vit" id="vitesseMoyenne">
+                </div>
+                <div class="input">
+                    <label for="km"><span class="appt">Kilomètre parcourus (km):</span></label>
+                    <input type="text" name="kilometre" id="km">
+                </div>
+                <div class="input">
+                    <span class="appt">Jour/Nuit :</span>
+                    <select class="select" id="idLuminosite" required>
+                        <option value="">--choix--</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <span class="appt">Méteo</span><select class="select" id="idMeteo" required>
+                        <option value="">--choix--</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <span class="appt">Traffic</span><select class="select" id="idTraffic" required>
+                        <option value="">--choix--</option>
+                    </select>
+                </div>
+    
+                <div class="input">
+                    <span class="appt">Trajet</span><select class="select" id="idTrajet" required>
+                        <option value="">--choix--</option>
+                    </select>
+                </div>     
+            </div>
+    
+            <div class="question">
+                    <span class="appt">Manoeuvres</span><select class="select" id="idManoeuvre" required>
+                        <option value="">--choix--</option>
+                    </select> 
+            </div>
+    
+            <div class="question">
+                <h4>Evaluation</h4>
+                <div class="block">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                    <input type="checkbox" class="input">
+                </div>
+            </div>
+    
+            <div class="question">
+                <h4><span>Commentaires :</span></h4>
+                <textarea name="commentaire" id="comment" placeholder="Mettez votre commentaire ici"></textarea>
+            </div>  
+    <script>
+    // écriture dynamique de la luminosite
+            luminosites.forEach(function (item, index) {
+            LOption = `<option value="${item.idLuminosite}">${item.luminosite}</option>`;
+            document.getElementById("idLuminosite").insertAdjacentHTML("beforeend", LOption);
+              });
+
+            // Ecriture dynamique des conditions méteo
+            lesconditionsMeteo.forEach(function(item, index){
+            let lOption = `<option value="${item.idMeteo}">${item.meteo}</option>`;
+
+            document.getElementById("idMeteo").insertAdjacentHTML("beforeend", lOption);  
+        });
+
+        // Ecriture dynamique des Types de traffics
+            typesTraffics.forEach(function(item, index){
+            let lOption = `<option value="${item.idTraffic}">${item.traffic}</option>`;
+
+            document.getElementById("idTraffic").insertAdjacentHTML("beforeend", lOption);
+            
+        });
+
+     // Ecriture dynamique des types de trajets
+            typesTrajets.forEach(function(item, index){
+            let lOption = `<option value="${item.idTrajet}">${item.trajet}</option>`;
+
+            document.getElementById("idTrajet").insertAdjacentHTML("beforeend", lOption);
+        });    
+
+        // Ecriture dynamique des autres manoeuvres
+        autresManoeuvres.forEach(function(item, index){
+            let lOption = `<option value="${item.idManoeuvre}">${item.manoeuvre}</option>`;
+
+            document.getElementById("idManoeuvre").insertAdjacentHTML("beforeend", lOption);
+        });    
+            
+    </script>
+          <button type="button"  onclick="saveExpConduite()">Enregistrer</button>            
+        </form>
+    </div>    
+</body>
+</html>

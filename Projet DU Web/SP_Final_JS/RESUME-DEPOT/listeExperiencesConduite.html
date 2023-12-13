@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let listeExperiencesConduite = 
+        [
+            {"idExperienceConduite":1,"Date":"2023-01-02","heureDepart":"04:00","heureArrivee":"05:20","nombreKilometre_km":"80","vitesseMoyenne_kmh":"60","idLuminosite":"2","idMeteo":"1","idTrajet":"1","idTraffic":"1","idManoeuvre":"1","commentaire":"Plusieurs sur la route"},
+            {"idExperienceConduite":2,"Date":"2023-02-02","heureDepart":"06:00","heureArrivee":"08:00","nombreKilometre_km":"120","vitesseMoyenne_kmh":"90","idLuminosite":"1","idMeteo":"2","idTrajet":"2","idTraffic":"2","idManoeuvre":"2","commentaire":"Encore des difficultés sur la route"},
+            {"idExperienceConduite":3,"Date":"2023-03-08","heureDepart":"09:30","heureArrivee":"10:30","nombreKilometre_km":"40","vitesseMoyenne_kmh":"50","idLuminosite":"1","idMeteo":"3","idTrajet":"4","idTraffic":"3","idManoeuvre":"3","commentaire":"Amélioration sur l'agglomeration"},
+            {"idExperienceConduite":4,"Date":"2023-04-15","heureDepart":"10:00","heureArrivee":"11:00","nombreKilometre_km":"60","vitesseMoyenne_kmh":"70","idLuminosite":"1","idMeteo":"3","idTrajet":"3","idTraffic":"4","idManoeuvre":"4","commentaire":"Conduite parfaite"},
+            {"idExperienceConduite":5,"Date":"2023-05-10","heureDepart":"11:00","heureArrivee":"12:00","nombreKilometre_km":"80","vitesseMoyenne_kmh":"60","idLuminosite":"1","idMeteo":"4","idTrajet":"3","idTraffic":"4","idManoeuvre":"4","commentaire":"Perte de contrôle au volant"},
+            {"idExperienceConduite":6,"Date":"2023-06-20","heureDepart":"13:30","heureArrivee":"14:30","nombreKilometre_km":"150","vitesseMoyenne_kmh":"110","idLuminosite":"1","idMeteo":"5","idTrajet":"3","idTraffic":"1","idManoeuvre":"5","commentaire":"Bonne conduite"},
+            {"idExperienceConduite":7,"Date":"2023-07-05","heureDepart":"14:00","heureArrivee":"15:00","nombreKilometre_km":"200","vitesseMoyenne_kmh":"130","idLuminosite":"1","idMeteo":"2","idTrajet":"3","idTraffic":"4","idManoeuvre":"6","commentaire":"Quelques difficultés dans les virages"},
+            {"idExperienceConduite":8,"Date":"2023-08-13","heureDepart":"15:45","heureArrivee":"17:45","nombreKilometre_km":"250","vitesseMoyenne_kmh":"80","idLuminosite":"1","idMeteo":"2","idTrajet":"2","idTraffic":"2","idManoeuvre":"7","commentaire":"Encore des difficultés sur les montagnes"},
+            {"idExperienceConduite":9,"Date":"2023-09-16","heureDepart":"17:00","heureArrivee":"18:00","nombreKilometre_km":"55","vitesseMoyenne_kmh":"40","idLuminosite":"1","idMeteo":"3","idTrajet":"1","idTraffic":"2","idManoeuvre":"8","commentaire":"Maîtrise au volant"},
+            {"idExperienceConduite":10,"Date":"2023-10-04","heureDepart":"18:00","heureArrivee":"20:00","nombreKilometre_km":"300","vitesseMoyenne_kmh":"110","idLuminosite":"2","idMeteo":"4","idTrajet":"3","idTraffic":"4","idManoeuvre":"6","commentaire":"Bonne maîtrise au volant "},
+            {"idExperienceConduite":11,"Date":"2023-11-13","heureDepart":"21:00","heureArrivee":"23:00","nombreKilometre_km":"190","vitesseMoyenne_kmh":"80","idLuminosite":"2","idMeteo":"1","idTrajet":"5","idTraffic":"1","idManoeuvre":"5","commentaire":"Quelques difficultés sur les virages"},
+            {"idExperienceConduite":12,"Date":"2023-12-13","heureDepart":"07:00","heureArrivee":"09:00","nombreKilometre_km":"150","vitesseMoyenne_kmh":"60","idLuminosite":"1","idMeteo":"3","idTrajet":"1","idTraffic":"2","idManoeuvre":"1","commentaire":"Non respect des priorités"},
+            {"idExperienceConduite":13,"Date":"2024-01-05","heureDepart":"10:00","heureArrivee":"12:00","nombreKilometre_km":"350","vitesseMoyenne_kmh":"90","idLuminosite":"1","idMeteo":"2","idTrajet":"5","idTraffic":"1","idManoeuvre":"3","commentaire":"Beaucoup de progrès"},
+            {"idExperienceConduite":14,"Date":"2023-02-13","heureDepart":"12:00","heureArrivee":"13:00","nombreKilometre_km":"70","vitesseMoyenne_kmh":"50","idLuminosite":"1","idMeteo":"4","idTrajet":"4","idTraffic":"2","idManoeuvre":"4","commentaire":"Très bonne conduite"},
+            {"idExperienceConduite":15,"Date":"2024-03-13","heureDepart":"08:00","heureArrivee":"10:00","nombreKilometre_km":"150","vitesseMoyenne_kmh":"80","idLuminosite":"1","idMeteo":"5","idTrajet":"5","idTraffic":"2","idManoeuvre":"2","commentaire":"Quelques erreurs de lecture des panneaux"},
+            {"idExperienceConduite":16,"Date":"2023-04-05","heureDepart":"16:00","heureArrivee":"17:30","nombreKilometre_km":"80","vitesseMoyenne_kmh":"50","idLuminosite":"1","idMeteo":"1","idTrajet":"2","idTraffic":"2","idManoeuvre":"1","commentaire":"Respect des priorités"},
+            {"idExperienceConduite":17,"Date":"2024-06-20","heureDepart":"21:00","heureArrivee":"23:00","nombreKilometre_km":"300","vitesseMoyenne_kmh":"110","idLuminosite":"2","idMeteo":"2","idTrajet":"3","idTraffic":"1","idManoeuvre":"8","commentaire":"Bonne maîtrise"},
+            {"idExperienceConduite":18,"Date":"2024-08-31","heureDepart":"07:00","heureArrivee":"10:00","nombreKilometre_km":"300","vitesseMoyenne_kmh":"80","idLuminosite":"1","idMeteo":"1","idTrajet":"1","idTraffic":"2","idManoeuvre":"1","commentaire":"Quelques erreurs sur la route"},
+            {"idExperienceConduite":19,"Date":"2024-10-05","heureDepart":"17:00","heureArrivee":"18:00","nombreKilometre_km":"75","vitesseMoyenne_kmh":"60","idLuminosite":"1","idMeteo":"5","idTrajet":"4","idTraffic":"1","idManoeuvre":"6","commentaire":"Excès de vitesse"}
+        ]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

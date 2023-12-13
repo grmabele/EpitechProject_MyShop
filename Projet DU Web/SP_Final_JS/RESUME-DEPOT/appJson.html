@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let experienceConduites = [
+                                {
+                                    "idExperienceConduite": 1,
+                                    "date": "2023-01-01",
+                                    "heureDepart": "19:00",
+                                    "heureArrivee": "20:00",
+                                    "idTrajet": 1,
+                                    "nombreKilometre(km)": 5,
+                                    "vitesseMoyenne(km/h)": 35,
+                                    "idMeteo": 1,
+                                    "idTraffic": 1,
+                                    "idManoeuvre": 1,
+                                    "idLuminosite": 1
+                                },
+                                {
+                                    "idExperienceConduite": 2,
+                                    "date": "2023-02-03",
+                                    "heureDepart": "16:00",
+                                    "heureArrivee": "17:00",
+                                    "idTrajet": 2,
+                                    "nombreKilometre(km)": 8,
+                                    "vitesse moyenne (km/h)": 45,
+                                    "idMeteo": 2,
+                                    "idTraffic": 2,
+                                    "idManoeuvre": 4,
+                                    "idLuminosite": 2
+                                },
+                                {
+                                    "idExperienceConduite": 3,
+                                    "date": "2023-03-01",
+                                    "heureDepart": "14:00",
+                                    "heureArrivee": "16:00",
+                                    "idTrajet": 3,
+                                    "nombreKilometre (km)": 15,
+                                    "vitesseMoyenne (km/h)": 80,
+                                    "idMeteo": 3,
+                                    "idTraffic": 3,
+                                    "idManoeuvre": 2,
+                                    "idLuminosite": 1
+                                },
+                                {
+                                    "idExperienceConduite": 4,
+                                    "date": "2023-04-01",
+                                    "heureDepart": "10:00",
+                                    "heureArrivee": "11:00",
+                                    "idTrajet": 4,
+                                    "nombreKilometre(km)": 7,
+                                    "vitesseMoyenne(km/h)": 50,
+                                    "idMeteo": 4,
+                                    "idTraffic": 4,
+                                    "idManoeuvre": 3,
+                                    "idLuminosite": 2
+                                },
+                                {
+                                    "idExperienceConduite": 5,
+                                    "date": "2023-05-01",
+                                    "heureDepart": "20:00",
+                                    "heureArrivée": "21:00",
+                                    "idTrajet": 5,
+                                    "nombreKilometre(km)": 12,
+                                    "vitesseMoyenne(km/h)": 45,
+                                    "idMeteo": 1,
+                                    "idTraffic": 2,
+                                    "idManoeuvre": 2,
+                                    "idLuminosite": 1,
+                                }
+                                ];
+                                        
+
+        let luminosites= [{"idLuminosite":1,"luminosite":"jour"},{"idLuminosite":2,"luminosite":"nuit"}];
+
+        let lesconditionsMeteo = [{"idMeteo":1,"meteo":"neigeux"},{"idMeteo":2,"meteo":"nuageux"},{"idMeteo":3,"meteo":"pluvieux"},{"idMeteo":4,"meteo":"brumeux"},{"idMeteo":5,"meteo":"ensoleille"}];
+
+        let typesTrajets = [{"idTrajet":1,"trajet":"campagne"},{"idTrajet":2,"trajet":"montagne"},{"idTrajet":3,"trajet":"autoRoute"},{"idTrajet":4,"trajet":"agglomeration"},{"idTrajet":5,"trajet":"mixte"}];
+
+        let typesTraffics = [{"idTraffric":1,"traffic":"fluide"},{"idTraffic":2,"traffic":"dense"},{"idTraffic":3,"traffic":"embouteillage"},{"idTraffic":4,"traffic":"mixte"}];
+
+        let autresManoeuvres = [{"idManoeuvre":1,"manoeuvre":"marche arrière en ligne droite"},{"idManoeuvre":2,"manoeuvre":"marche arrière en courbe"},{"idManoeuvre":3,"manoeuvre":"rangement en créneaux"},{"idManoeuvre":4,"manoeuvre":"rangement en épis"},{"idManoeuvre":5,"manoeuvre":"rangement en bataille"},{"idManoeuvre":6,"manoeuvre":"demi-tour"},{"idManoeuvre":7,"manoeuvre":"freinage pour s'arrêter avec précision"},{"idManoeuvre":8,"manoeuvre":"démarrage en côte"}];
+
+        let commentaires = [{"idCommentaire":1,"commentaire":"bonne conduite"}, {"idCommentaire":2,"commentaire":"difficulté sur la montagne"},{"idCommentaire":3,"commentaire":"encore des difficultés"},{"idCommentaire":4,"commentaire":"conduite en progression"},{"idCommentaire":5,"commentaire":"bonne conduite"}];
+                
+        console.log("JASON format");
+
+        console.log(experienceConduite);
+        
+        console.log(lesconditionsMeteo);
+        console.log(typesTrajets);
+        console.log(autresManoeuvres);
+        console.log(typesTraffics);
+        console.log(commentaires);
+        console.log(luminosites);
+
+    </script>
+
+</body>
+</html>
+

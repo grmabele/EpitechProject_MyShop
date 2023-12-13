@@ -1,0 +1,16 @@
+.idea
+jobteaser/node_modules
+jobteaser/public/hot
+jobteaser/public/storage
+jobteaser/storage/*.key
+jobteaser/vendor
+jobteaser/.env
+jobteaser/.env.backup
+jobteaser/.phpunit.result.cache
+jobteaser/docker-compose.override.yml
+jobteaser/Homestead.json
+jobteaser/Homestead.yaml
+jobteaser/npm-debug.log
+jobteaser/yarn-error.log
+Readme.md
+

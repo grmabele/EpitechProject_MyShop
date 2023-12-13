@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Muli';
+    src: url(../fonts/Muli.eot);
+    src: url(../fonts/Muli.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Muli.otf) format('otf'),
+    url(../fonts/Muli.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'CountrysideTwo-r9WO';
+    src: url(../fonts/CountrysideTwo-r9WO.eot);
+    src: url(../fonts/CountrysideTwo-r9WO.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/CountrysideTwo-r9WO.ttf) format('truetype'),
+    url(../fonts/CountrysideTwo-r9WO.woff) format('woff');
+}
+.logo h1{
+    font: 29px "CountrysideTwo-r9WO";
+    color: #63bdce;
+    margin-top: -9px;
+    height: 50px;
+}
+.logo{
+    text-decoration: none !important;
+}
+body{
+    font:14px 'Muli';
+}
+.heading-page{
+    margin: 50px 0;
+}
+.heading-page h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.heading-page p{
+    text-align: center;
+    font-size: 22px;
+    width: 500px;
+    margin:20px auto 0;
+}
+.job-img-post{
+    width: 100%;
+    height: 500px;
+}
+a.bt-job-content {
+    display: block;
+    width: 120px;
+    color: white;
+    background-color: #63bdce;
+    padding:8px  5px;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 2px solid #45a0b1;
+    margin-top: 50px;
+    text-decoration: none;
+}
+.py-5{
+    padding-bottom: 0 !important;
+}
+.py-5 h4, .py-6 h4{
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.py-5 p, .py-6 p{
+    font-size: 15px;
+}
+header{
+    background-color: #343a40;
+    padding: 0 30px;
+    position: relative;
+}
+.show-box{
+    position: absolute;
+    background-color: #343a40;
+    right: 21px;
+    top: 50px;
+    z-index: 999999;
+    border-radius: 5px;
+    padding: 15px;
+    display: none;
+
+}
+a{
+    text-decoration: none !important;
+}
+.show-box a{
+    color: #63bdce;
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+}
+.show-box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.login{
+    float: right;
+    border: 1px solid #63bdce;
+    color: #63bdce;
+    background-color: transparent !important;
+    text-shadow: none !important;
+    outline: none !important;
+}
+.login:hover{
+    color: #fff;
+    background-color: #63bdce !important;
+    border-color: #63bdce;
+}
+
+
+  
+  .footer_copyright {
+    background-color: #343a40;
+   
+ }
+
+ .m-2{
+     list-style: none;
+ }
+
+@media (max-width:768px){
+    .heading-page p{
+        width: 100%;
+    }
+    a.bt-job-content{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .logo h1{
+        font-size: 23px;
+        margin-top: -2px;
+        height: 41px;
+    }
+    .login {
+        margin-top: -3px;
+    }
+    header{
+        padding: 0 15px;
+    }
+    .job-img-post {
+        height: 350px;
+    }
+    .py-5 h4, .py-6 h4{
+        margin-top: 50px;
+    }
+}
+@media (max-width:992px){
+  .navbar{
+        position: relative;
+    }
+    .navbar-dark .navbar-toggler{
+        position: absolute;
+        right:105px;
+        top: 10px;
+    }
+    .navbar-nav .nav-item{
+        text-align: center;
+    }
+}
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-collapse{
+        display: block !important;
+    }
+    .navbar-nav{
+        width: 268px;
+        direction: rtl;
+        float: right;
+    }
+
+
+}
+
+/*------------------------*/
+.form-job label{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+.form-job label input, .form-job label textarea{
+    display: block;
+    width: 100%;
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+
+}
+.form-job label textarea{
+    height: 150px;
+}
+.form-job label .txt{
+    font-weight: 600;
+    color :#8c8c8c;
+    margin-bottom: 10px;
+    display: block;
+}
+.form-job h5.ttl {
+    margin-top: 20px;
+    padding: 30px 0 27px;
+    font-size: 26px;
+    border-bottom: 1px solid #dadada;
+    font-weight: 600;
+}
+.form-job .add, .form-job .delete{
+    border: 0;
+    margin-top: 15px;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 19px;
+}
+.form-job .delete{
+    color: red;
+    font-weight: 600;
+}
+.input-file-container {
+    position: relative;
+    width: 225px;
+}
+.form-job .save{
+    border:0;
+    margin-top: 30px;
+}
+.clear{
+    clear: both;
+}
+.js .input-file-trigger , .form-job .save{
+    display: block;
+    padding: 8px 23px;
+    background: #63bdce;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.js .input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+    background: #63bdce;
+    color: #ffffff;
+}
+
+.file-return {
+    margin: 0;
+}
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+.js .file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+.js .file-return:not(:empty):before {
+    content: "Selected file: ";
+    font-style: normal;
+    font-weight: normal;
+}
+
